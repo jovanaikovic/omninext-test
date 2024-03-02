@@ -11,5 +11,6 @@
 
 **Start of the project**
 
-Now that we are all set with the requirements, we need to create a virtual environment locally, with **python3 -m venv venv** in the project repository we previously created. To activate virtual environment, I remind you for WIN command is **venv/Scripts/activate** while for Mac/Linux its **source venv/bin/activate**
+Now that we are all set with the requirements, we need to create a virtual environment locally, with **python3 -m venv venv** in the project repository we previously created.
+To activate virtual environment, I remind you for WIN command is **venv/Scripts/activate** while for Mac/Linux its **source venv/bin/activate**
 To initialize the project, we position ourselves inside the project repository, and run **serverless create --template aws-python3 --path our-project-name**, and then position inside that project name directory.
