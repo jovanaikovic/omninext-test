@@ -84,3 +84,7 @@ Now that we are all set with the requirements:
 		}
 	]
 }
+-----------------
+
+# **Testing**
+I tested the endpoints using postman, sending POST request to the endpoint /user, and GET request to the endpoint /user/{id}. Postman collection file is attached.
