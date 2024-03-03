@@ -84,7 +84,8 @@ Now that we are all set with the requirements:
 		}
 	]
 }
------------------
+1. After these are done, do the serverless deploy (if not already done, if it is, still run it just in case, so you make sure all the eventual changes in your code are saved)
+--------------
 
 # **Testing**
 I tested the endpoints using postman, sending POST request to the endpoint /user, and GET request to the endpoint /user/{id}. Postman collection file is attached.
