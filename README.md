@@ -21,52 +21,52 @@ Now that we are all set with the requirements:
 
 # **Important notes**
 
-1. Highly important is to make sure that through AWS Console, we added adequate policies for permissions for IAM user who is not root. I suggest adding **CloudDirectoryFullAccess, AmazonDynamoDBFullAccess, AWSLambdaFullAccess**, as well as custom policies I created for the purposes of smooth running.
+Highly important is to make sure that through AWS Console, we added adequate policies for permissions for IAM user who is not root. I suggest adding **CloudDirectoryFullAccess, AmazonDynamoDBFullAccess, AWSLambdaFullAccess**, as well as custom policies I created for the purposes of smooth running.
 
 **Bucket Policy**
-{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Effect": "Allow",
-			"Action": [
-				"s3:PutObject",
-				"s3:GetObject",
-				"s3:ListBucket"
-			],
-			"Resource": [
-				"arn:aws:s3:::*"
-			]
-		}
-	]
+{\
+	"Version": "2012-10-17",\
+	"Statement": [\
+		{\
+			"Effect": "Allow",\
+			"Action": [\
+				"s3:PutObject",\
+				"s3:GetObject",\
+				"s3:ListBucket"\
+			],\
+			"Resource": [\
+				"arn:aws:s3:::*"\
+			]\
+		}\
+	]\
 }
 
 **Cloud&API policy**
-{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Sid": "Stmt1449904348000",
-			"Effect": "Allow",
-			"Action": [
-				"cloudformation:CreateStack",
-				"cloudformation:CreateChangeSet",
-				"cloudformation:ListStacks",
-				"cloudformation:UpdateStack",
-				"cloudformation:DescribeStacks",
-				"cloudformation:DescribeStackResource",
-				"cloudformation:DescribeStackEvents",
-				"cloudformation:ValidateTemplate",
-				"cloudformation:DescribeChangeSet",
-				"cloudformation:ExecuteChangeSet",
-				"cloudformation:GetTemplateSummary",
-				"cloudformation:DeleteChangeSet",
-				"apigateway:GET",
-				"apigateway:POST",
-				"apigateway:DELETE",
-				"apigateway:PUT"
-			],
-			"Resource": [
+{\
+	"Version": "2012-10-17",\
+	"Statement": [\
+		{\
+			"Sid": "Stmt1449904348000",\
+			"Effect": "Allow",\
+			"Action": [\
+				"cloudformation:CreateStack",\
+				"cloudformation:CreateChangeSet",\
+				"cloudformation:ListStacks",\
+				"cloudformation:UpdateStack",\
+				"cloudformation:DescribeStacks",\
+				"cloudformation:DescribeStackResource",\
+				"cloudformation:DescribeStackEvents",\
+				"cloudformation:ValidateTemplate",\
+				"cloudformation:DescribeChangeSet",\
+				"cloudformation:ExecuteChangeSet",\
+				"cloudformation:GetTemplateSummary",\
+				"cloudformation:DeleteChangeSet",\
+				"apigateway:GET",\
+				"apigateway:POST",\
+				"apigateway:DELETE",\
+				"apigateway:PUT"\
+			],\
+			"Resource": [\
 				"*"
 			]
 		}
@@ -74,18 +74,18 @@ Now that we are all set with the requirements:
 }
 
 **DB Help Policy**
-{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Effect": "Allow",
-			"Action": "dynamodb:PutItem",
+{\
+	"Version": "2012-10-17",\
+	"Statement": [\
+		{\
+			"Effect": "Allow",\
+			"Action": "dynamodb:PutItem",\
 			"Resource": "arn:aws:dynamodb:us-east-1:891377357282:table/Users"
 		}
 	]
-}
-1. After these are done, do the serverless deploy (if not already done, if it is, still run it just in case, so you make sure all the eventual changes in your code are saved)
---------------
+}\
+After these are done, do the serverless deploy (if not already done, if it is, still run it just in case, so you make sure all the eventual changes in your code are saved)
 
+--------------
 # **Testing**
 I tested the endpoints using postman, sending POST request to the endpoint /user, and GET request to the endpoint /user/{id}. Postman collection file is attached.
