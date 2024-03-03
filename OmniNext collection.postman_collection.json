@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "5816f9e0-1cbb-4b75-a3ef-cd84a1ecacac",
+		"name": "OmniNext collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29971831",
+		"_collection_link": "https://carsapp2023.postman.co/workspace/Cars~2ee7e147-9b66-4428-8157-0d020c64017b/collection/29971831-5816f9e0-1cbb-4b75-a3ef-cd84a1ecacac?action=share&source=collection_link&creator=29971831"
+	},
+	"item": [
+		{
+			"name": "/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\" : \"Username\", \"email\":\"email@email.com\"}"
+				},
+				"url": {
+					"raw": "https://9n6ea5glxb.execute-api.us-east-1.amazonaws.com/dev/user",
+					"protocol": "https",
+					"host": [
+						"9n6ea5glxb",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://9n6ea5glxb.execute-api.us-east-1.amazonaws.com/dev/user/{id}",
+					"protocol": "https",
+					"host": [
+						"9n6ea5glxb",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"dev",
+						"user",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
